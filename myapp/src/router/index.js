@@ -2,12 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ShowOglasi from '../views/ShowOglasi.vue'
 import MakeOglas from '../views/MakeOglas.vue'
+import OglasView from '../views/OglasView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/oglasview/:naziv',
+    name: 'oglasview',
+    component: OglasView
   },
   {
     path: '/showoglasi',

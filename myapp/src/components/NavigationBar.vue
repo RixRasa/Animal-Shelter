@@ -12,7 +12,7 @@
                 <router-link to='/about' class="nav-item nav-link">About</router-link>
                 <router-link to='/showoglasi' class="nav-item nav-link">Lost Pets</router-link>
                 <router-link to='/makeoglas' class="nav-item nav-link">Make Oglas</router-link>
-                <router-link to='/' class="nav-item nav-link">Moj Nalog</router-link>
+                <router-link to='/oglasview' class="nav-item nav-link">Moj Nalog</router-link>
                 <div class="nav-item dropdown">
                     <router-link to='/' class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Animals</router-link>
                     <div class="dropdown-menu m-0">

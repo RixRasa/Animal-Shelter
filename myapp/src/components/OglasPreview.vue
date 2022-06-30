@@ -8,7 +8,7 @@
                 </div>
                 <h5 class="text-uppercase mb-3">{{mojOglas.naslov}}</h5>
                 <p>{{mojOglas.opis}}</p>
-                <a class="text-primary text-uppercase" href="">Procitaj Vise<i class="bi bi-chevron-right"></i></a>
+                <router-link  :to='/oglasview/+mojOglas.naziv' class="text-primary text-uppercase" >Procitaj Vise<i class="bi bi-chevron-right"></i></router-link>
             </div>
         </div>
     </div>
