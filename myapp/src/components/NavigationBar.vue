@@ -13,15 +13,35 @@
                 <router-link to='/showoglasi' class="nav-item nav-link">Izgubljeni Ljubimci </router-link>
                 <router-link to='/makeoglas' class="nav-item nav-link">Dodaj Oglas</router-link>
                 <router-link to='/oglasview' class="nav-item nav-link">Moj Nalog</router-link>
+
                 <div class="nav-item dropdown">
-                    <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>
-                    <div class="dropdown-menu m-0">
+                    <div v-if="lang.value == 'srb'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>
+                    <div v-if="lang.value == 'srb'"  class="dropdown-menu m-0">
                         <router-link to='/psi' class="dropdown-item">Psi</router-link>
                         <router-link to='/macke' class="dropdown-item">Macke</router-link>
                         <router-link to='/ptice' class="dropdown-item">Ptice</router-link>
                        
                     </div>
                 </div>
+                <div class="nav-item dropdown">
+                    <div v-if="lang.value == 'eng'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Animals</div>
+                    <div v-if="lang.value == 'eng'"  class="dropdown-menu m-0">
+                        <router-link to='/psi' class="dropdown-item">Dogs</router-link>
+                        <router-link to='/macke' class="dropdown-item">Cats</router-link>
+                        <router-link to='/ptice' class="dropdown-item">Birds</router-link>
+                       
+                    </div>
+                </div>
+
+                <div class="nav-item nav-select language">
+                    <select @change="lang.changeLang()" class="form-select">
+                    <option v-if="lang.value == 'srb'" value="s">Srpski</option>
+                    <option v-else-if="lang.value == 'eng'" value="e">English</option>
+                    <option v-if="lang.value == 'srb'" value="s">Engleski</option>
+                    <option v-else-if="lang.value == 'eng'" value="e">Serbian</option>
+                    </select>
+                </div>
+
                 <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
@@ -84,6 +104,22 @@
     color: var(--primary);
 }
 
+.language{
+    padding: 20px 0;
+    margin-left: 30px;
+}
 
 </style>
 
+
+<script>
+import { lang } from "../data/lang.js";
+export default {
+    name: "NavigationBar",
+    data() {
+        return {
+            lang
+        };
+    },
+};
+</script>
