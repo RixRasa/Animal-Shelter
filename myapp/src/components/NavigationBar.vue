@@ -35,10 +35,10 @@
 
                 <div class="nav-item nav-select language">
                     <select @change="lang.changeLang()" class="form-select">
-                    <option v-if="lang.value == 'srb'" value="s">Srpski</option>
-                    <option v-else-if="lang.value == 'eng'" value="e">English</option>
-                    <option v-if="lang.value == 'srb'" value="s">Engleski</option>
-                    <option v-else-if="lang.value == 'eng'" value="e">Serbian</option>
+                    <option v-if="lang.value == 'srb'" >Srpski</option>
+                    <option v-else-if="lang.value == 'eng'" >English</option>
+                    <option v-if="lang.value == 'srb'" >Engleski</option>
+                    <option v-else-if="lang.value == 'eng'">Serbian</option>
                     </select>
                 </div>
 

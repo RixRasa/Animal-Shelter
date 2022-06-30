@@ -26,12 +26,16 @@
                 </div>
             </div>
         </div>
-    </div> 
-
-
-    
+    </div>   
 </template>
 
+<style scoped>
+
+img{
+    border: 3px solid rgb(0, 85, 255);
+}
+  
+</style>
 
 
 

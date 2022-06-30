@@ -1,7 +1,11 @@
 <template>
-<div>
+<div id="app">
   <NavigationBar></NavigationBar>
+
   <router-view/>
+
+  <FooterComponent />
+
 </div>
 </template>
 <!--
@@ -64,16 +68,24 @@
     padding-right: 0;
     text-align: center;
 }
+
+
+#app{
+  background-color: aliceblue;
+}
+
+
 </style>
 
 
 <script>
 import NavigationBar from './components/NavigationBar.vue'
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default{
   name : 'App',
   components:{
-    NavigationBar
+    NavigationBar, FooterComponent
   }
 }
 </script>

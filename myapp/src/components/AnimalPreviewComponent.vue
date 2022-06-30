@@ -41,6 +41,8 @@
 img {  
     max-width: 250px;  
     max-width: 250px;  
+    border: 2px solid rgb(0, 85, 255);
+
 }  
 </style>
 
