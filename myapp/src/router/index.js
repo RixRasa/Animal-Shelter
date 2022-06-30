@@ -3,6 +3,11 @@ import HomeView from '../views/HomeView.vue'
 import ShowOglasi from '../views/ShowOglasi.vue'
 import MakeOglas from '../views/MakeOglas.vue'
 import OglasView from '../views/OglasView.vue'
+import AnimalView from '../views/AnimalView.vue'
+import MackeView from '../views/MackeView.vue'
+import PsiView from '../views/PsiView.vue'
+import PticeView from '../views/PticeView.vue'
+
 
 const routes = [
   {
@@ -32,7 +37,28 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  },
+  {
+    path: '/animal/:id',
+    name: "animalview",
+    component: AnimalView
+  },
+  {
+    path: '/psi',
+    name: "PsiView",
+    component: PsiView
+  },
+  {
+    path: '/macke',
+    name: "MackeView",
+    component: MackeView
+  },
+  {
+    path: '/ptice',
+    name: "PticeView",
+    component: PticeView
+  },
+
 ]
 
 const router = createRouter({

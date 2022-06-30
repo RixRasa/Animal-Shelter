@@ -14,11 +14,11 @@
                 <router-link to='/makeoglas' class="nav-item nav-link">Dodaj Oglas</router-link>
                 <router-link to='/oglasview' class="nav-item nav-link">Moj Nalog</router-link>
                 <div class="nav-item dropdown">
-                    <router-link to='/' class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Animals</router-link>
+                    <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Psi</a>
-                        <a href="team.html" class="dropdown-item">Macke</a>
-                        <a href="testimonial.html" class="dropdown-item">Ptice</a>
+                        <router-link to='/psi' class="dropdown-item">Psi</router-link>
+                        <router-link to='/macke' class="dropdown-item">Macke</router-link>
+                        <router-link to='/ptice' class="dropdown-item">Ptice</router-link>
                        
                     </div>
                 </div>
