@@ -42,7 +42,7 @@ export default{
             kontakt:'',
             naslov:'',
             tekst:'',
-            naziv:'',
+            ime:'',
             oglasi:[],
         }
     },
@@ -54,7 +54,7 @@ export default{
             var godina = today.getFullYear();
             var datum = dan + "-" + mesec + "-" + godina;
 
-            this.oglasi.push({'naziv':this.naziv, 'naslov':this.naslov,'opis':this.tekst,'kontakt':this.kontakt,'datum':datum})
+            this.oglasi.push({'naziv':this.ime, 'naslov':this.naslov,'opis':this.tekst,'kontakt':this.kontakt,'datum':datum})
             localStorage.setItem("allOglasi",JSON.stringify(this.oglasi))
 
 

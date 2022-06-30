@@ -2,9 +2,9 @@
     <div class="container-fluid py-5">
       <div class="container">
           <div class="row ">
-              <div class="col-lg-6 col-sm-12 bg-light me-5" style="">
+              <div class="col-lg-6 col-sm-12  me-5" style="">
                 <div class="row">
-                    <div class='col-sm-12'>
+                    <div class='col-sm-12 bg-light ms-2'>
                         <div class=" border-5 border-primary  mb-5">
                             <div class="d-flex justify-content-between">
                                 <h6 class="text-primary text-uppercase">Oglas Nestanka</h6>
@@ -22,7 +22,8 @@
                         <br><br>
                         <h5 class="text-body mb-4">{{oglas.kontakt}}</h5>
                     </div>
-                    <div class="col-sm-12">
+                    <hr class='ms-2'>
+                    <div class="col-sm-12 mt-3">
                         <h3>Ostavite Komentar</h3>
                         <form>
                             <div class="row g-3">
