@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ShowOglasi from '../views/ShowOglasi.vue'
+import MakeOglas from '../views/MakeOglas.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/showoglasi',
+    name: 'showoglasi',
+    component: ShowOglasi
+  },
+  {
+    path: '/makeoglas',
+    name: 'makeoglas',
+    component: MakeOglas
   },
   {
     path: '/about',
