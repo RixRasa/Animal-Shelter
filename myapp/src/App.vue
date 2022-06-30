@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" >
   <NavigationBar></NavigationBar>
 
   <router-view/>
@@ -19,6 +19,7 @@
 }
 -->
 <style>
+
 
 :root {
     --primary: #7AB730;
