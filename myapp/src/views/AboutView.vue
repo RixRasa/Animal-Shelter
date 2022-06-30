@@ -3,12 +3,12 @@
 <div class="container-fluid py-5">
       <div class="container">
           <div class="row gx-5">
-              <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+              <div class="col-lg-5 col-sm-12 mb-5 mb-lg-0" style="min-height: 500px;">
                   <div class="position-relative h-100">
                       <img class="position-absolute w-100 h-100 rounded" src="about.jpg" style="object-fit: cover;">
                   </div>
               </div>
-              <div class="col-lg-7" style="text-align: center;">
+              <div class="col-lg-7 col-sm-12" style="text-align: center;">
                   <div class="border-start border-5 border-primary ps-5 mb-5">
                       <h6 class="text-primary text-uppercase">About Us</h6>
                       <h1 class="display-5 text-uppercase mb-0">We Keep Your Pets Happy All Time</h1>

@@ -6,20 +6,20 @@
                 <h1 class="display-5 text-uppercase mb-0">Ostavite oglas vaseg izgubljenog ljubimca</h1>
             </div>
             <div class="row g-5">
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-sm-12">
                     <form>
                         <div class="row g-3">
                             <div class="col-12">
-                                <input class="form-control bg-light border-0 px-4" placeholder="Naziv/Name" style="height: 55px;" v-model="ime">
+                                <input required class="form-control bg-light border-0 px-4" placeholder="Ime Ljubimca/Name of Pet" style="height: 55px;" v-model="ime">
                             </div>
                             <div class="col-12">
-                                <input class="form-control bg-light border-0 px-4" placeholder="Kontakt/Contact" style="height: 55px;" v-model="kontakt">
+                                <input required class="form-control bg-light border-0 px-4" placeholder="Kontakt/Contact" style="height: 55px;" v-model="kontakt">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Naslov/Title" style="height: 55px;" v-model="naslov">
+                                <input required type="text" class="form-control bg-light border-0 px-4" placeholder="Naslov/Title" style="height: 55px;" v-model="naslov">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Tekst/Text" v-model="tekst"></textarea>
+                                <textarea required class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Tekst/Text" v-model="tekst"></textarea>
                             </div>
                             <div class="col-12">
                                 <button @click='addOglas()' class="btn btn-primary w-100 py-3" type="submit">Objavite Oglas</button>
