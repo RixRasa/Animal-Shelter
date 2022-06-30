@@ -9,18 +9,17 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <router-link to='/' class="nav-item nav-link">Home</router-link>
-                <router-link to='/about' class="nav-item nav-link">About</router-link>
-                <router-link to='/showoglasi' class="nav-item nav-link">Lost Pets</router-link>
-                <router-link to='/makeoglas' class="nav-item nav-link">Make Oglas</router-link>
+                <router-link to='/about' class="nav-item nav-link">O nama</router-link>
+                <router-link to='/showoglasi' class="nav-item nav-link">Izgubljeni Ljubimci </router-link>
+                <router-link to='/makeoglas' class="nav-item nav-link">Dodaj Oglas</router-link>
                 <router-link to='/oglasview' class="nav-item nav-link">Moj Nalog</router-link>
                 <div class="nav-item dropdown">
                     <router-link to='/' class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Animals</router-link>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        <a href="price.html" class="dropdown-item">Psi</a>
+                        <a href="team.html" class="dropdown-item">Macke</a>
+                        <a href="testimonial.html" class="dropdown-item">Ptice</a>
+                       
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i class="bi bi-arrow-right"></i></a>
