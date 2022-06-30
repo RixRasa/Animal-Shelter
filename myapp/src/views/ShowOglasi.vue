@@ -6,7 +6,7 @@
                 <h1 class="display-5 text-uppercase mb-0">Poslednji oglasi o izgubljenim zivotinjama</h1>
             </div>
         <div class="row">
-            <div v-for='oglas in oglasi' :key="oglas.naziv" class="col-lg-4 col-sm-6 my-3">
+            <div v-for='oglas in oglasi' :key="oglas.naziv" class="col-lg-4 col-md-6 col-sm-12 my-3">
                 <OglasPreview :mojOglas='oglas'></OglasPreview>
             </div>
         </div>

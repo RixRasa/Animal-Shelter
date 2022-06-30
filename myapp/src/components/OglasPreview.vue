@@ -1,6 +1,6 @@
 <template>
     <div class="blog-item  bg-light">  
-        <div class="col-12 col-sm-7 h-100 w-100 d-flex flex-column justify-content-center">
+        <div class=" h-100 w-100 d-flex flex-column justify-content-center">
             <div class="p-4">
                 <div class="d-flex mb-3">
                     <small class="me-3"><i class="bi bi-bookmarks me-2"></i>nestao</small>
@@ -22,3 +22,6 @@ export default{
     ]
 }
 </script>
+
+
+
