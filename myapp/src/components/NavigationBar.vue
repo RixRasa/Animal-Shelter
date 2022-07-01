@@ -47,7 +47,16 @@
                     </select>
                 </div>
 
-                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i class="bi bi-arrow-right"></i></a>
+                <div v-if="lang.value == 'srb'" class="nav-item nav-link bg-primary px-5 ms-lg-5 d-flex flex-column justify-content-center" style="padding-top:10px;padding-bottom:10px">
+                    <router-link to='/login' class='text-white '>Prijavite se</router-link>
+                    <router-link to='/register' class='text-white'>Registrujte se</router-link>
+                </div>
+
+                <div v-if="lang.value == 'eng'" class="nav-item nav-link bg-primary px-5 ms-lg-5 d-flex flex-column justify-content-center" style="padding-top:10px;padding-bottom:10px">
+                    <router-link to='/login' class='text-white '>Login</router-link>
+                    <router-link to='/register' class='text-white'>Register</router-link>
+                </div>
+                
             </div>
         </div>
     </nav>

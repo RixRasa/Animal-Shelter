@@ -7,6 +7,8 @@ import AnimalView from '../views/AnimalView.vue'
 import MackeView from '../views/MackeView.vue'
 import PsiView from '../views/PsiView.vue'
 import PticeView from '../views/PticeView.vue'
+import RegisterView from '../views/RegisterView.vue'
+import LoginView from '../views/LoginView.vue'
 
 
 const routes = [
@@ -14,6 +16,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: RegisterView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
   {
     path: '/oglasview/:naziv',
