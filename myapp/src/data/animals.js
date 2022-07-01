@@ -1,7 +1,7 @@
 let animals = [
 
     {
-      //ovaj je tvoj raso, youtube link moras da embedujes, i kad napises sve kopiraj to u birds.js takodje, to treba za preview
+      //ovaj je tvoj raso, kad napises sve kopiraj to u birds.js takodje, to treba za preview
       id: 1,
       nameS: "",
       nameE: "",
@@ -12,7 +12,7 @@ let animals = [
       weight: "0.9kg",
       age: "1",
       image_path: "/images/bird1.jpg",
-      video_path: 'https://www.youtube.com/watch?v=y6IiLTm7rI4'
+      video_path: "https://www.youtube.com/embed/ewptevBIqNk"
     },
     {
       id: 2,
