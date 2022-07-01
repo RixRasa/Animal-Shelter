@@ -26,16 +26,11 @@
 
 
                         <div class="list-group">
-                            <div class="list-group-item list-group-item-action active" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h2 class="text-uppercase mb-3" v-if="lang.value == 'srb'"></h2>
-                                    <h2 class="text-uppercase mb-3" v-else-if="lang.value == 'eng'"></h2>
-                                </div>
-                            </div>
+                           
                             <div class="list-group-item list-group-item-action">
                                 <div class="d-flex w-100 justify-content-between">
-                                <h4 v-if="lang.value == 'srb'" class="mb-1">Opis:</h4>
-                                <h4 v-if="lang.value == 'eng'" class="mb-1">Description:</h4>
+                                <h4 v-if="lang.value == 'srb'" class="mb-1">Korisnicko ime: {{user.username}}</h4>
+                                <h4 v-if="lang.value == 'eng'" class="mb-1">Username: {{user.username}}</h4>
                                 </div>
                                 <h5 v-if="lang.value == 'srb'"></h5>
                                 <h5 v-else-if="lang.value == 'eng'"></h5>
@@ -43,16 +38,11 @@
                             </div>
                             <div class="list-group-item list-group-item-action">
                                 <div class="d-flex w-100 justify-content-between">
-                                <h4 v-if="lang.value == 'srb'">Tezina: </h4>
-                                <h4 v-else-if="lang.value == 'eng'">Weight: </h4>
+                                <h4 v-if="lang.value == 'srb'">Email: {{user.email}}</h4>
+                                <h4 v-else-if="lang.value == 'eng'">Email: {{user.email}}</h4>
                                 </div>
                             </div>
-                            <div class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                <h4 v-if="lang.value == 'srb'">Starost:  y/o</h4>
-                                <h4 v-else-if="lang.value == 'eng'">Age:  y/o</h4> 
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -82,6 +72,7 @@ import {lang} from '../data/lang.js'
 import OglasPreview from '../components/OglasPreview.vue'
 import KomentarPreview from '../components/KomentarPreview.vue'
 
+
 export default{
     components:{
             OglasPreview,
@@ -94,12 +85,15 @@ export default{
             allOglas:[],
             mojOglasi:[],
             mojiKomentari:[],
+            user:{},
         }
     },
     created(){
         var username = JSON.parse(localStorage.getItem('CurrentUser'));
         this.allUsers = JSON.parse(localStorage.getItem('allUsers'));
-        
+
+        this.user = this.allUsers.find(user => user.username=username)
+
         this.allOglasi = JSON.parse(localStorage.getItem('allOglasi'));
         this.mojOglasi = this.allOglasi.filter(oglas => oglas.username == username);
        
