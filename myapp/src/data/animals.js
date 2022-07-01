@@ -1,9 +1,10 @@
 let animals = [
 
     {
+      //ovaj je tvoj raso, youtube link moras da embedujes, i kad napises sve kopiraj to u birds.js takodje, to treba za preview
       id: 1,
-      nameS: "Pera Detlic",
-      nameE: "Peter the Woodpecker",
+      nameS: "",
+      nameE: "",
       descriptionS:
         "Divan detlic. Voli da udara kljunom u drvo. Jako druzeljubiv i nekadasnji prijatelj bigl Bele.",
       descriptionE:
@@ -11,102 +12,95 @@ let animals = [
       weight: "0.9kg",
       age: "1",
       image_path: "/images/bird1.jpg",
-      video_path: 'https://www.youtube.com/embed/fAfNuGIjFOo'
+      video_path: 'https://www.youtube.com/watch?v=y6IiLTm7rI4'
     },
     {
       id: 2,
-      nameS: "Zoki Papiga",
-      nameE: "Parrot Zokey",
-      descriptionS:
-        "Izglasan za najboljeg pevaca u azilu. Njujorska opera je ponudila milion evra za transfer ovog papagaja ali on je odlucio da ostane u Srbiji. Osim sto lepo peva ima i zanimljivo perje plave boje.",
-      descriptionE:
-        "Voted best singer in the shelter. New York opera house offered 1 million for the transfer of Zokey but he decided to stay in Serbia. He also has beautiful blue feathers.",
+      nameS: "Princ Papiga",
+      nameE: "Prince Papiga",
+      descriptionS: "Stalno se ponasa kao da je princ, tako je i dobio svoje ime. Ima prelepo belo perje koje se nikad ne prlja.",
+      descriptionE: "He always acts like a prince, that's how he got his name. He also has beautiful white feathers that never get dirty.",
       weight: "1kg",
       age: "2",
       image_path: "/images/bird2.jpg",
-      video_path: "https://www.youtube.com/embed/sWh_2Iit3Ek"
+      video_path: "https://www.youtube.com/embed/xH-FMD4lU6I"
     },
     {
       id: 3,
-      nameS: "Papagaj Feniks",
-      nameE: "Phoenix the parrot",
-      descriptionS:
-        "Veoma retka vrsta feniks papagaja iz Kolumbije. Ima jako vatren izgled. Zanimljivo je sto se hrani samo jednom dnevno.",
-      descriptionE:
-        "Very rare phoenix parrot from Columbia. Looks very firey. It's interesting that he eats food only once a day.",
+      nameS: "Papagaj Robin",
+      nameE: "Robin the parrot",
+      descriptionS: "Izglasan za najboljeg pevaca u azilu. Osim sto lepo peva ima i zanimljivo perje zelene boje.",
+      descriptionE: "Voted best singer in the shelter. He also has beautiful green feathers.",
       weight: "0.5kg",
       age: "3",
       image_path: "/images/bird3.jpg",
-      video_path: "https://www.youtube.com/embed/t1dTp5wK20U"
+      video_path: "https://www.youtube.com/embed/8uXrgv1xIFk"
     },
     {
       id: 4,
-      nameS: "Nebojsa",
-      nameE: "Nebojsa",
-      descriptionS: "Najludja glava u azilu. Ne sme niko da mu pridje.",
-      descriptionE:
-        "Everyone respects him. The most dangerous cat in the shelter.",
+      nameS: "Garfild",
+      nameE: "Garfield",
+      descriptionS: "Voli da jede lazanju. Najdeblja macka u azilu. Nije druzeljubiva i bije se sa svima za hranu. Molim vas udomite je.",
+      descriptionE: "Loves lasagna. Fattest cat here. Please adopt it. He can't make friends because he fights everyone for food.",
       weight: "6kg",
-      age: "1",
+      age: "3",
       image_path: "/images/cat1.jpg",
-      video_path: "https://www.youtube.com/embed/0VO6BEllpHE"
+      video_path: "https://www.youtube.com/embed/dd_j1euRTkQ"
     },
     {
       id: 5,
-      nameS: "Luna, Leo i Zoi",
-      nameE: "Luna, Leo and Zoe",
-      descriptionS: "Slatki macici.",
-      descriptionE: "Cute kittens.",
+      nameS: "Leo",
+      nameE: "Leo",
+      descriptionS: "Prelepa crna macka, voli da se sunca.",
+      descriptionE: "Beautiful black cat, loves to sunbathe.",
       weight: "2kg",
       age: "6",
       image_path: "/images/cat2.jpg",
-      video_path: "https://www.youtube.com/embed/ZIQiiG6i09A"
+      video_path: "https://www.youtube.com/embed/t60i9kPv3xQ"
     },
     {
       id: 6,
-      nameS: "Garfild",
-      nameE: "Garfield",
-      descriptionS:
-        "Voli da jede lazanju. Najdeblja macka u azilu. Nije druzeljubiva i bije se sa svima za hranu. Molim vas udomite je.",
-      descriptionE:
-        "Loves lasagna. Fattest cat here. Please adopt it. He can't make friends because he fights everyone for food.",
-      weight: "90kg",
+      nameS: "Snezna kraljica",
+      nameE: "Snow queen",
+      descriptionS: "Prelepa bela macka. Voli da je u centru paznje i da se mazi stalno.",
+      descriptionE: "Beautiful white cat. She likes to be the center of attention and to be petted all the time.",
+      weight: "4kg",
       age: "2",
       image_path: "/images/cat3.jpg",
-      video_path: "https://www.youtube.com/embed/9BilR0kUkbs"
+      video_path: "https://www.youtube.com/embed/wgVnXD6EySI"
     },
     {
       id: 7,
-      nameS: "Retriver Carli",
-      nameE: "Charlie the Retriever",
-      descriptionS: "Inteligentan, privrzen i lojalan pas",
-      descriptionE: "Even-tempered, intelligent and affectionate dog",
-      weight: "15kg",
-      age: "4",
+      nameS: "Lima Andriana",
+      nameE: "Lima Andriana",
+      descriptionS: "Inteligentan, privrzen i lojalan pas. Nije druzeljubiva sa ostalim psima, ali nema vece maze sa ljudima.",
+      descriptionE: "Even-tempered, intelligent and affectionate dog. She is not sociable with other dogs, but she loves to cudles with humans.",
+      weight: "23kg",
+      age: "7",
       image_path: "/images/dog1.jpg",
-      video_path: "https://www.youtube.com/embed/Lc6db8qfZEw"
+      video_path: "https://www.youtube.com/embed/y6IiLTm7rI4"
     },
     {
       id: 8,
-      nameS: "Koli Vini",
-      nameE: "Winnie the Collie",
-      descriptionS: "Zastitnicki, osetljiv i umiljat pas",
-      descriptionE: "Protective, responsive and affectionate dog",
-      weight: "22kg",
-      age: "3",
+      nameS: "Anabela zvana Bela",
+      nameE: "Anabela aka Bela",
+      descriptionS: "Zastitnicki, osetljiv i umiljat pas, pun energije. Budite spremni na setnje svakog dana.",
+      descriptionE: "Protective, responsive and affectionate dog, full of energy. Be prepared for walks every day.",
+      weight: "25kg",
+      age: "5",
       image_path: "/images/dog2.jpg",
-      video_path: "https://www.youtube.com/embed/KRJO1RJTloU"
+      video_path: "https://www.youtube.com/embed/4GMRiQk-8Zw"
     },
     {
       id: 9,
-      nameS: "Bigl Bela",
-      nameE: "Bella the Beagle",
-      descriptionS: "Prijateljski, drustven i zivahan pas",
-      descriptionE: "Friendly, outgoing and vivacious dog",
-      weight: "11kg",
-      age: "6",
+      nameS: "Akira",
+      nameE: "Akira",
+      descriptionS: "Prijateljski, drustven i zivahan pas. Iako jos mala, veoma je jak pas i dobar cuvar.",
+      descriptionE: "Friendly, outgoing and vivacious dog, Although she is still small, she is a very strong dog and a good watchdog.",
+      weight: "15kg",
+      age: "1",
       image_path: "/images/dog3.jpg",
-      video_path: "https://www.youtube.com/embed/Y7fGNsgCcHc"
+      video_path: "https://www.youtube.com/embed/N9eO9gp2zsw"
     },
   ];
   
