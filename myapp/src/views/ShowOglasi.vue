@@ -24,7 +24,6 @@
     import OglasPreview from '../components/OglasPreview.vue'
     import allOglasi from '../data/oglasi.js'
     import { lang } from "../data/lang.js";
-
     export default{
         name : 'ShowOglasi',
         components:{
@@ -39,12 +38,12 @@
         created(){
             if(localStorage.getItem('allOglasi')==null){
                 localStorage.setItem('allOglasi', JSON.stringify(allOglasi))
+                this.oglasi = JSON.parse(localStorage.getItem('allOglasi'));
             }
             else{
                 this.oglasi = JSON.parse(localStorage.getItem('allOglasi'));
             }
         }
-
     }
 </script>
 
