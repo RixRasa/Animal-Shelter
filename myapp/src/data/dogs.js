@@ -7,7 +7,7 @@ let dogs = [
       descriptionS: "Inteligentan, privrzen i lojalan pas",
       descriptionE: "Even-tempered, intelligent and affectionate dog",
       weight: "15kg",
-      age: "1 y/o",
+      age: "4",
       image_path: "/images/dog1.jpg",
       video_path: "https://www.youtube.com/embed/Lc6db8qfZEw"
     },
@@ -19,7 +19,7 @@ let dogs = [
       descriptionS: "Zastitnicki, osetljiv i umiljat pas",
       descriptionE: "Protective, responsive and affectionate dog",
       weight: "22kg",
-      age: "3 y/0",
+      age: "3",
       image_path: "/images/dog2.jpg",
       video_path: "https://www.youtube.com/embed/KRJO1RJTloU"
     },
@@ -31,7 +31,7 @@ let dogs = [
       descriptionS: "Prijateljski, drustven i zivahan pas",
       descriptionE: "Friendly, outgoing and vivacious dog",
       weight: "11kg",
-      age: "6 y/o",
+      age: "6",
       image_path: "/images/dog3.jpg",
       video_path: "https://www.youtube.com/embed/Y7fGNsgCcHc"
     },

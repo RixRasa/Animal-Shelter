@@ -38,7 +38,7 @@ let birds = [
       descriptionE:
         "Very rare phoenix parrot from Columbia. Looks very firey. It's interesting that he eats food only once a day.",
       weight: "0.5kg",
-      age: "3.14",
+      age: "3",
       image_path: "/images/bird3.jpg",
       video_path: "https://www.youtube.com/embed/t1dTp5wK20U"
     },

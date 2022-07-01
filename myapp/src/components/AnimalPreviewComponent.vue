@@ -20,8 +20,8 @@
                         <br>
                         <h6 v-if="lang.value == 'srb'">Tezina: {{ myanimal.weight }}</h6>
                         <h6 v-else-if="lang.value == 'eng'">Weight: {{ myanimal.weight }}</h6>
-                        <h6 v-if="lang.value == 'srb'">Starost: {{ myanimal.age }}</h6>
-                        <h6 v-else-if="lang.value == 'eng'">Age: {{ myanimal.age }}</h6>
+                        <h6 v-if="lang.value == 'srb'">Starost: {{ myanimal.age }} y/o</h6>
+                        <h6 v-else-if="lang.value == 'eng'">Age: {{ myanimal.age }} y/o</h6>
                         <br>
 
                         <router-link :to='/animal/+myanimal.id' class="text-primary text-uppercase">

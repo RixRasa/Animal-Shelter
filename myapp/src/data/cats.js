@@ -20,7 +20,7 @@ let cats = [
       descriptionS: "Slatki macici.",
       descriptionE: "Cute kittens.",
       weight: "2kg",
-      age: "6 m/o",
+      age: "6",
       image_path: "/images/cat2.jpg",
       video_path: "https://www.youtube.com/embed/ZIQiiG6i09A"
     },

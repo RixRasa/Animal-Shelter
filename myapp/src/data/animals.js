@@ -35,7 +35,7 @@ let animals = [
       descriptionE:
         "Very rare phoenix parrot from Columbia. Looks very firey. It's interesting that he eats food only once a day.",
       weight: "0.5kg",
-      age: "3.14",
+      age: "3",
       image_path: "/images/bird3.jpg",
       video_path: "https://www.youtube.com/embed/t1dTp5wK20U"
     },
@@ -58,7 +58,7 @@ let animals = [
       descriptionS: "Slatki macici.",
       descriptionE: "Cute kittens.",
       weight: "2kg",
-      age: "6 m/o",
+      age: "6",
       image_path: "/images/cat2.jpg",
       video_path: "https://www.youtube.com/embed/ZIQiiG6i09A"
     },
@@ -82,7 +82,7 @@ let animals = [
       descriptionS: "Inteligentan, privrzen i lojalan pas",
       descriptionE: "Even-tempered, intelligent and affectionate dog",
       weight: "15kg",
-      age: "1 y/o",
+      age: "4",
       image_path: "/images/dog1.jpg",
       video_path: "https://www.youtube.com/embed/Lc6db8qfZEw"
     },
@@ -93,7 +93,7 @@ let animals = [
       descriptionS: "Zastitnicki, osetljiv i umiljat pas",
       descriptionE: "Protective, responsive and affectionate dog",
       weight: "22kg",
-      age: "3 y/0",
+      age: "3",
       image_path: "/images/dog2.jpg",
       video_path: "https://www.youtube.com/embed/KRJO1RJTloU"
     },
@@ -104,7 +104,7 @@ let animals = [
       descriptionS: "Prijateljski, drustven i zivahan pas",
       descriptionE: "Friendly, outgoing and vivacious dog",
       weight: "11kg",
-      age: "6 y/o",
+      age: "6",
       image_path: "/images/dog3.jpg",
       video_path: "https://www.youtube.com/embed/Y7fGNsgCcHc"
     },

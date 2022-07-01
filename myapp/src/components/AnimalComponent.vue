@@ -20,8 +20,8 @@
                         <br>
                         <h5 v-if="lang.value == 'srb'">Tezina: {{ myanimal.weight }}</h5>
                         <h5 v-else-if="lang.value == 'eng'">Weight: {{ myanimal.weight }}</h5>
-                        <h5 v-if="lang.value == 'srb'">Starost: {{ myanimal.age }}</h5>
-                        <h5 v-else-if="lang.value == 'eng'">Age: {{ myanimal.age }}</h5>
+                        <h5 v-if="lang.value == 'srb'">Starost: {{ myanimal.age }} y/o</h5>
+                        <h5 v-else-if="lang.value == 'eng'">Age: {{ myanimal.age }} y/o</h5>
                     </div>
                 </div>
             </div>
