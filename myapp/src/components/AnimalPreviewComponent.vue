@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-9">
+    <div class="col-lg-9 border">
         <div class="blog-item">
             <div class="row g-0 bg-light overflow-hidden">
                 <div class="col-12 col-sm-5 h-100">
@@ -42,8 +42,9 @@ img {
     max-width: 250px;  
     max-width: 250px;  
     border: 2px solid rgb(0, 85, 255);
+}
 
-}  
+
 </style>
 
 

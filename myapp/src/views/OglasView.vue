@@ -7,7 +7,8 @@
                     <div class='col-sm-12 bg-light ms-2'>
                         <div class=" border-5 border-primary  mb-5">
                             <div class="d-flex justify-content-between">
-                                <h6 class="text-primary text-uppercase">Oglas Nestanka</h6>
+                                <h6 v-if="lang.value == 'srb'" class="text-primary text-uppercase">Oglas Nestanka</h6>
+                                <h6 v-if="lang.value == 'eng'" class="text-primary text-uppercase">Ad of disappearance</h6>
                                 <small><i class="bi bi-calendar-date me-2"></i>{{oglas.datum}}</small>
                             </div><br>  
                             <h3 class="display-5 text-uppercase mb-0">{{oglas.naslov}}</h3>
@@ -24,7 +25,8 @@
                     </div>
                     <hr class='ms-2'>
                     <div class="col-sm-12 mt-3">
-                        <h3>Ostavite Komentar</h3>
+                        <h3 v-if="lang.value == 'srb'">Ostavite Komentar</h3>
+                        <h3 v-if="lang.value == 'eng'">Leave a comment</h3>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12">
@@ -36,8 +38,11 @@
                                 <div class="col-12">
                                     <textarea required class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Tekst/Text" v-model="tekst"></textarea>
                                 </div>
-                                <div class="col-12">
+                                <div v-if="lang.value == 'srb'" class="col-12">
                                     <button @click='addKomentar()' class="btn btn-primary w-100 py-3" type="submit">Ostavite Komentar</button>
+                                </div>
+                                <div v-if="lang.value == 'eng'" class="col-12">
+                                    <button @click='addKomentar()' class="btn btn-primary w-100 py-3" type="submit">Leave a comment</button>
                                 </div>
                             </div>
                         </form>
@@ -46,7 +51,8 @@
               </div>
               
               <div class="col-lg-5 col-sm-12" >
-                    <h3 class=''>Komentari</h3>
+                    <h3 v-if="lang.value == 'srb'" class=''>Komentari</h3>
+                    <h3 v-if="lang.value == 'eng'" class=''>Comments</h3>
                     <hr>
                     <div class='mb-3' v-for='komentar in komentari' :key="komentar.ime" >
                         <KomentarPreview :mojKomentar='komentar'></KomentarPreview>
@@ -60,7 +66,7 @@
 
 <script>
 import KomentarPreview from '../components/KomentarPreview.vue'
-
+import { lang } from "../data/lang.js";
 import allOglasi from '../data/oglasi.js'
 
 export default{
@@ -75,6 +81,7 @@ export default{
             ime: '',
             tekst: '',
             email: '',
+            lang,
         }
     },
     created(){

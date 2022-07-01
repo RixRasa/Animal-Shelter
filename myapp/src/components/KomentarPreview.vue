@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 py-2">
+    <div class="w-100 py-2 border">
         <div class="second py-2 px-2"> <span class="text1">{{mojKomentar.ime}}</span>
             <div class="d-flex justify-content-between py-1 pt-2">
                 <div><img src="https://i.imgur.com/tPvlEdq.jpg" width="18"><span class="text2">{{mojKomentar.opis}}</span></div>

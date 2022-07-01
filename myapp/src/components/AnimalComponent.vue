@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-12">
+    <div class="col-lg-12 border">
         <div class="blog-item">
             <div class="row g-0 bg-light overflow-hidden">
                 <div class="col-12 col-sm-5 h-100">

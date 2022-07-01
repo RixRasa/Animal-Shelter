@@ -1,9 +1,13 @@
 <template>
     <div class="container-fluid pt-5">
         <div class="container">
-            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+            <div v-if="lang.value == 'srb'" class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase">Oglas</h6>
                 <h1 class="display-5 text-uppercase mb-0">Ostavite oglas vaseg izgubljenog ljubimca</h1>
+            </div>
+            <div v-if="lang.value == 'eng'" class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Ad</h6>
+                <h1 class="display-5 text-uppercase mb-0">Post an ad about your lost pet</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-7 col-sm-12">
@@ -21,8 +25,11 @@
                             <div class="col-12">
                                 <textarea required class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Tekst/Text" v-model="tekst"></textarea>
                             </div>
-                            <div class="col-12">
-                                <button @click='addOglas()' class="btn btn-primary w-100 py-3" type="submit">Objavite Oglas</button>
+                            <div v-if="lang.value == 'srb'" class="col-12">
+                                <button @click='addOglas()' class="btn btn-primary w-100 py-3" type="submit">Objavi</button>
+                            </div>
+                            <div v-if="lang.value == 'eng'" class="col-12">
+                                <button @click='addOglas()' class="btn btn-primary w-100 py-3" type="submit">Post</button>
                             </div>
                         </div>
                     </form>
@@ -32,8 +39,13 @@
     </div>
 </template>
 
+<style scoped>
+
+</style>
+
 <script>
 import allOglasi from '../data/oglasi.js'
+import { lang } from "../data/lang.js";
 
 export default{
     name : "MakeOglas",
@@ -44,6 +56,7 @@ export default{
             tekst:'',
             ime:'',
             oglasi:[],
+            lang,
         }
     },
     methods:{

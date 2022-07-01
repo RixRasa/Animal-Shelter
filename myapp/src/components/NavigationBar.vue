@@ -8,11 +8,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <router-link to='/' class="nav-item nav-link">Home</router-link>
-                <router-link to='/about' class="nav-item nav-link">O nama</router-link>
-                <router-link to='/showoglasi' class="nav-item nav-link">Izgubljeni Ljubimci </router-link>
-                <router-link to='/makeoglas' class="nav-item nav-link">Dodaj Oglas</router-link>
-                <router-link to='/oglasview' class="nav-item nav-link">Moj Nalog</router-link>
+                <router-link to='/' v-if="lang.value == 'srb'" class="nav-item nav-link">Pocetna</router-link>
+                <router-link to='/' v-if="lang.value == 'eng'" class="nav-item nav-link">Home</router-link>
+                <router-link to='/about' v-if="lang.value == 'srb'" class="nav-item nav-link">O nama</router-link>
+                <router-link to='/about' v-if="lang.value == 'eng'" class="nav-item nav-link">About us</router-link>
+                <router-link  to='/showoglasi' v-if="lang.value == 'srb'" class="nav-item nav-link">Izgubljeni Ljubimci </router-link>
+                <router-link to='/showoglasi' v-if="lang.value == 'eng'" class="nav-item nav-link">Lost Pets </router-link>
+                <router-link to='/makeoglas' v-if="lang.value == 'srb'" class="nav-item nav-link">Dodaj Oglas</router-link>
+                <router-link to='/makeoglas' v-if="lang.value == 'eng'" class="nav-item nav-link">Post Ads</router-link>
+                <router-link to='/oglasview' v-if="lang.value == 'srb'" class="nav-item nav-link">Moj Nalog</router-link>
+                <router-link to='/oglasview' v-if="lang.value == 'eng'" class="nav-item nav-link">My Profile</router-link>
 
                 <div class="nav-item dropdown">
                     <div v-if="lang.value == 'srb'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>

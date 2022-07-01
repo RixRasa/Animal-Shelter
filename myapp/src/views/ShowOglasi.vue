@@ -1,9 +1,13 @@
 <template>
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+            <div v-if="lang.value == 'srb'" class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase">Oglasi</h6>
                 <h1 class="display-5 text-uppercase mb-0">Poslednji oglasi o izgubljenim zivotinjama</h1>
+            </div>
+            <div v-if="lang.value == 'eng'" class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Ads</h6>
+                <h1 class="display-5 text-uppercase mb-0">Recent ads about lost pets</h1>
             </div>
         <div class="row">
             <div v-for='oglas in oglasi' :key="oglas.naziv" class="col-lg-4 col-md-6 col-sm-12 my-3">
@@ -19,6 +23,8 @@
 <script>
     import OglasPreview from '../components/OglasPreview.vue'
     import allOglasi from '../data/oglasi.js'
+    import { lang } from "../data/lang.js";
+
     export default{
         name : 'ShowOglasi',
         components:{
@@ -26,7 +32,8 @@
         },
         data(){
             return{
-                oglasi:[]
+                oglasi:[],
+                lang
             }
         },
         created(){
