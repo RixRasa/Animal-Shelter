@@ -4,7 +4,7 @@
           <div class="row ">
               <div class="col-lg-6 col-sm-12  me-5" style="">
                 <div class="row">
-                    <div class='col-sm-12 bg-light ms-2'>
+                    <div class='col-sm-12 bg-light ms-2 border'>
                         <div class=" border-5 border-primary  mb-5">
                             <div class="d-flex justify-content-between">
                                 <h6 v-if="lang.value == 'srb'" class="text-primary text-uppercase">Oglas Nestanka</h6>
@@ -23,7 +23,7 @@
                         <br><br>
                         <h5 class="text-body mb-4">{{oglas.kontakt}}</h5>
                     </div>
-                    <hr class='ms-2'>
+                    <br class='ms-2'>
                     <div class="col-sm-12 mt-3">
                         <h3 v-if="lang.value == 'srb'">Ostavite Komentar</h3>
                         <h3 v-if="lang.value == 'eng'">Leave a comment</h3>
@@ -82,6 +82,7 @@ export default{
             tekst: '',
             email: '',
             lang,
+            komentariCurUser:[],
         }
     },
     created(){
@@ -101,13 +102,34 @@ export default{
         else{
             this.komentari = JSON.parse(localStorage.getItem(this.oglas.naziv));
         }
+
+        //Trenutni Korisnik i njegovi komentari
+        var curUser = JSON.parse(localStorage.getItem("CurrentUser"))
+
+        if(localStorage.getItem(curUser) == null){
+            this.komentariCurUser = []
+        }
+        else{
+            this.komentariCurUser = JSON.parse(localStorage.getItem(curUser));
+        }
+        //
         
     },
     methods:{
         addKomentar(){
+            if(localStorage.getItem("CurrentUser") == null){
+                alert("Morate biti ulogovani");
+                return;
+            }
             if(this.ime == '' || this.tekst == '' || this.email == ''){return;}
-            this.komentari.push({'ime':this.ime,'opis':this.tekst,'email':this.email})
+
+            var user = JSON.parse(localStorage.getItem("CurrentUser"));
+
+            this.komentari.push({'ime':this.ime,'opis':this.tekst,'email':this.email,'username':user})
             localStorage.setItem(this.oglas.naziv,JSON.stringify(this.komentari))
+
+            this.komentariCurUser.push({'ime':this.ime,'opis':this.tekst,'email':this.email,'username':user})
+            localStorage.setItem(user,JSON.stringify(this.komentariCurUser))
         }
     }
 

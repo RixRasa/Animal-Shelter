@@ -62,6 +62,7 @@
 <script>
 import allUsers from '../data/users.js'
 import { lang } from "../data/lang.js";
+import {logged } from '../data/logged.js'
 
 export default {
     name : "LoginView",
@@ -101,7 +102,7 @@ export default {
            }
 
             localStorage.setItem('CurrentUser',JSON.stringify(this.username));
-
+            logged.changeLang()
 
 
 

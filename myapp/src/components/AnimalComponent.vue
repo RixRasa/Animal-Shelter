@@ -2,10 +2,10 @@
     <div class="col-lg-12 border">
         <div class="blog-item">
             <div class="row g-0 bg-light overflow-hidden">
-                <div class="col-12 col-md-5 sm-12 h-100">
+                <div class="col-12 col-md-5 col-sm-12 h-100">
                     <img class="img-fluid h-100" :src="myanimal.image_path" style="object-fit: cover;">
                 </div>
-                <div class="col-12 col-md-7 sm-12 h-100 d-flex flex-column justify-content-center">
+                <div class="col-12 col-md-7 col-sm-12 h-100 d-flex flex-column justify-content-center">
                     <div class="p-4">
                         <!--
                         <h2 class="text-uppercase mb-3" v-if="lang.value == 'srb'">{{ myanimal.nameS }}</h2>

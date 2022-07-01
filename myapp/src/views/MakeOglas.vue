@@ -61,13 +61,17 @@ export default{
     },
     methods:{
         addOglas(){
+            if(localStorage.getItem("CurrentUser") == null){
+                alert("Morate biti ulogovani");
+                return;
+            }
             var today = new Date();
             var dan = today.getDay();
             var mesec = today.getMonth();
             var godina = today.getFullYear();
             var datum = dan + "-" + mesec + "-" + godina;
-
-            this.oglasi.push({'naziv':this.ime, 'naslov':this.naslov,'opis':this.tekst,'kontakt':this.kontakt,'datum':datum})
+            var username = JSON.parse(localStorage.getItem("CurrentUser"));
+            this.oglasi.push({'naziv':this.ime, 'naslov':this.naslov,'opis':this.tekst,'kontakt':this.kontakt,'datum':datum,'username':username})
             localStorage.setItem("allOglasi",JSON.stringify(this.oglasi))
 
 

@@ -9,6 +9,7 @@ import PsiView from '../views/PsiView.vue'
 import PticeView from '../views/PticeView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import LoginView from '../views/LoginView.vue'
+import MojNalogView from '../views/MojNalogView.vue'
 
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/mojnalog',
+    name: 'mojnalog',
+    component: MojNalogView
   },
   {
     path: '/register',

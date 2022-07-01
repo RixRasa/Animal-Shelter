@@ -16,8 +16,8 @@
                 <router-link to='/showoglasi' v-if="lang.value == 'eng'" class="nav-item nav-link">Lost Pets </router-link>
                 <router-link to='/makeoglas' v-if="lang.value == 'srb'" class="nav-item nav-link">Dodaj Oglas</router-link>
                 <router-link to='/makeoglas' v-if="lang.value == 'eng'" class="nav-item nav-link">Post Ads</router-link>
-                <router-link to='/oglasview' v-if="lang.value == 'srb'" class="nav-item nav-link">Moj Nalog</router-link>
-                <router-link to='/oglasview' v-if="lang.value == 'eng'" class="nav-item nav-link">My Profile</router-link>
+                <router-link to='/mojnalog' v-if="lang.value == 'srb'" class="nav-item nav-link">Moj Nalog</router-link>
+                <router-link to='/mojnalog' v-if="lang.value == 'eng'" class="nav-item nav-link">My Profile</router-link>
 
                 <div class="nav-item dropdown">
                     <div v-if="lang.value == 'srb'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>
@@ -48,14 +48,18 @@
                 </div>
 
                 <div v-if="lang.value == 'srb'" class="nav-item nav-link bg-primary px-5 ms-lg-5 d-flex flex-column justify-content-center" style="padding-top:10px;padding-bottom:10px">
-                    <router-link to='/login' class='text-white '>Prijavite se</router-link>
-                    <router-link to='/register' class='text-white'>Registrujte se</router-link>
+                    <router-link v-if="logged.value == false" to='/login' class='text-white '>Prijavite se</router-link>
+                    <router-link @click='logged.changeLang()' v-if="logged.value == true" to='/' class='text-white '>Odjavite se</router-link>
+                    <router-link v-if="logged.value == false" to='/register' class='text-white'>Registrujte se</router-link>
                 </div>
 
                 <div v-if="lang.value == 'eng'" class="nav-item nav-link bg-primary px-5 ms-lg-5 d-flex flex-column justify-content-center" style="padding-top:10px;padding-bottom:10px">
-                    <router-link to='/login' class='text-white '>Login</router-link>
-                    <router-link to='/register' class='text-white'>Register</router-link>
+                    <router-link v-if="logged.value == false" to='/login' class='text-white '>Login</router-link>
+                    <router-link @click='logged.changeLang()' v-if="logged.value == true" to='/' class='text-white '>Logout</router-link>
+                    <router-link v-if="logged.value == false" to='/register' class='text-white'>Register</router-link>
                 </div>
+
+                
                 
             </div>
         </div>
@@ -128,12 +132,25 @@
 
 <script>
 import { lang } from "../data/lang.js";
+import { logged } from "../data/logged.js"
 export default {
     name: "NavigationBar",
     data() {
         return {
-            lang
+            lang,
+            logged,
         };
     },
+    created(){
+        if(localStorage.getItem("CurrentUser") == null) {logged.value = false;}
+        else{
+            logged.value = true;
+        }
+    },
+    methods:{
+        Logout(){
+            localStorage.removeItem('CurrentUser');
+        }
+    }
 };
 </script>

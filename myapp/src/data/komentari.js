@@ -3,7 +3,8 @@ const allOglasi = [
         
         ime : "Djole",
         opis : "pas vidjen u obliznjem zatvoru",
-        email:'stojanovic@gmail.com'
+        email:'stojanovic@gmail.com',
+        
         
     },
     {   

@@ -54,7 +54,7 @@
                         <label v-if="lang.value == 'eng'" class="form-check-label" for="form2Example3">
                         I agree all statements in <a href="#!">Terms of service</a>
                         </label>
-                         <label v-if="lang.value == 'srb'" class="form-check-label" for="form2Example3">
+                        <label v-if="lang.value == 'srb'" class="form-check-label" for="form2Example3">
                         Slažem se sa svim <a href="#!">odredbama i uslovima</a>
                         </label>
                     </div>
@@ -86,6 +86,7 @@
 <script>
 import allUsers from '../data/users.js'
 import { lang } from "../data/lang.js";
+import {logged } from '../data/logged.js'
 
 export default {
     name : "RegisterView",
@@ -130,7 +131,7 @@ export default {
             localStorage.setItem('allUsers',JSON.stringify(this.users));
 
             localStorage.setItem('CurrentUser',JSON.stringify(this.username));
-
+            logged.changeLang();
 
 
 
