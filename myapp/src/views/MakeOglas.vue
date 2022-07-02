@@ -2,8 +2,8 @@
 
 <div class="breadcrums">
         <router-link to='/makeoglas' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Dodaj Oglas</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Post Ads</text>
+            <text v-if="lang.value == 'srb'">Dodaj Oglas</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Post Ads</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
     </div>
 

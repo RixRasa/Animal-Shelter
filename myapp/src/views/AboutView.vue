@@ -3,8 +3,8 @@
 
 <div class="breadcrums">
         <router-link to='/about' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">O nama</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">About us</text>
+            <text v-if="lang.value == 'srb'">O nama</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">About us</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
     </div>
 
@@ -18,12 +18,33 @@
               </div>
               <div class="col-lg-7 col-sm-12" style="text-align: center;">
                   <div class="border-start border-5 border-primary ps-5 mb-5">
-                      <h6 class="text-primary text-uppercase">About Us</h6>
-                      <h1 class="display-5 text-uppercase mb-0">We Keep Your Pets Happy All Time</h1>
+                      <h6 v-if="lang.value == 'srb'" class="text-primary text-uppercase">O nama</h6>
+                      <h6 v-if="lang.value == 'eng'" class="text-primary text-uppercase">About Us</h6>
+
+                      <h1 class="display-5 text-uppercase mb-0"></h1>
+                      <h1 v-if="lang.value == 'srb'" class="display-5 text-uppercase mb-0">Srecno mesto za sve zivotinje</h1>
+                      <h1 v-if="lang.value == 'eng'" class="display-5 text-uppercase mb-0">Happy place for all animals</h1>
                   </div>
-                  <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
+                  <br><br><br>
+
+                  <h4 v-if="lang.value == 'srb'" class="text-body mb-4">“Sve dok neko ne zavoli zivotinju, deo njegove duse ostaje neprobudjen” –Anatole France.</h4>
+                  <h4 v-if="lang.value == 'eng'" class="text-body mb-4">“Until one has loved an animal, a part of one's soul remains unawakened.” –Anatole France.</h4>
+                  <br><br><br>
+                  
                   <div class="bg-light p-4">
-                      <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                        <ul v-if="lang.value == 'srb'" class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                          <li class="nav-item w-50" role="presentation">
+                              <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
+                                  aria-selected="true">Nasa misija</button>
+                          </li>
+                          <li class="nav-item w-50" role="presentation">
+                              <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
+                                  aria-selected="false">Kako pomoci</button>
+                          </li>
+                      </ul>
+                      <ul v-if="lang.value == 'eng'" class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
                           <li class="nav-item w-50" role="presentation">
                               <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
                                   data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
@@ -32,15 +53,22 @@
                           <li class="nav-item w-50" role="presentation">
                               <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
                                   data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
-                                  aria-selected="false">Our Vission</button>
+                                  aria-selected="false">How to help</button>
                           </li>
                       </ul>
                       <div class="tab-content" id="pills-tabContent">
-                          <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-                              <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                          <div v-if="lang.value == 'srb'" class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                              <p class="mb-0">Nasa misija je da svakom izgubljenom ljubimcu nadjemo njegovog vlasnika, i da svakom ostavljenom nadjemo novi dom</p>
                           </div>
-                          <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-                              <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                          <div v-if="lang.value == 'eng'" class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                              <p class="mb-0">Our mission is to find its owner for every lost pet, and to find a new home for every abandoned pet</p>
+                          </div>
+
+                          <div v-if="lang.value == 'srb'" class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                              <p class="mb-0">Ako vidite ljubimca bez vlasnika u blizini proverite da li je izgubljen ili napusten, pa pozovite nas</p>
+                          </div>
+                          <div v-if="lang.value == 'eng'" class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                              <p class="mb-0">If you see a pet without an owner nearby, check if it is lost or abandoned, then call us</p>
                           </div>
                       </div>
                   </div>

@@ -2,12 +2,12 @@
 
 <div class="breadcrums">
         <router-link to='/' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Zivotinje</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Animals</text>
+            <text v-if="lang.value == 'srb'">Zivotinje</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Animals</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
         <router-link to='/macke' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Macke</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Cats</text>
+            <text v-if="lang.value == 'srb'">Macke</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Cats</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
     </div>
 

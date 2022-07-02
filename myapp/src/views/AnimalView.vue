@@ -2,24 +2,24 @@
 
 <div class="breadcrums">
         <router-link to='/' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Zivotinje</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Animals</text>
+            <text v-if="lang.value == 'srb'">Zivotinje</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Animals</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
         <router-link to='/psi' v-if="animal.type == 3" class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Psi</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Dogs</text>
+            <text v-if="lang.value == 'srb'">Psi</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Dogs</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
         <router-link to='/macke' v-if="animal.type == 2" class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Macke</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Cats</text>
+            <text v-if="lang.value == 'srb'">Macke</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Cats</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
         <router-link to='/ptice' v-if="animal.type == 1" class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Ptice</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Birds</text>
+            <text v-if="lang.value == 'srb'">Ptice</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Birds</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
         <router-link :to='/animal/+animal.id' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">{{ animal.nameS }}</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">{{ animal.nameE }}</text>
+            <text v-if="lang.value == 'srb'">{{ animal.nameS }}</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">{{ animal.nameE }}</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
 </div>
 

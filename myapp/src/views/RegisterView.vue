@@ -2,8 +2,8 @@
 
 <div class="breadcrums">
         <router-link to='/register' class="text-primary text-uppercase">
-            <text v-if="lang.value == 'srb'">Registrovanje</text><i class="bi bi-chevron-right"></i>
-            <text v-if="lang.value == 'eng'">Register</text>
+            <text v-if="lang.value == 'srb'">Registrovanje</text><i v-if="lang.value == 'srb'" class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Register</text><i v-if="lang.value == 'eng'" class="bi bi-chevron-right"></i>
         </router-link>
     </div>
 
