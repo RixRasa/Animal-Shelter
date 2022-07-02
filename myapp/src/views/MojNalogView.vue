@@ -70,9 +70,9 @@
                     <KomentarPreview :mojKomentar='komentar'></KomentarPreview>
                 </div>
             </div>
-            
         </div>
     </div>
+    <br><br><br><br>
 </template>
 
 <script>
