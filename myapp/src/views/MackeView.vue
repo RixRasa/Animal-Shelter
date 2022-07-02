@@ -1,5 +1,16 @@
 <template>
 
+<div class="breadcrums">
+        <router-link to='/' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Zivotinje</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Animals</text>
+        </router-link>
+        <router-link to='/macke' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Macke</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Cats</text>
+        </router-link>
+    </div>
+
     <div class="container-fluid py-5">
         <div class="container">
             <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">

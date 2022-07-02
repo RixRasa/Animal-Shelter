@@ -1,4 +1,12 @@
 <template>
+
+<div class="breadcrums">
+        <router-link to='/register' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Registrovanje</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Register</text>
+        </router-link>
+    </div>
+
     <section class="vh-100" >
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">

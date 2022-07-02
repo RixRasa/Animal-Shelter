@@ -3,6 +3,7 @@ let birds = [
   {
     //ovaj je tvoj raso, kad napises sve kopiraj to u birds.js takodje(ili u animals.js gde god si prvo usao)
     id: 1,
+    type: 1,
     nameS: "",
     nameE: "",
     descriptionS:
@@ -16,6 +17,7 @@ let birds = [
   },
   {
     id: 2,
+    type: 1,
     nameS: "Princ Papiga",
     nameE: "Prince Papiga",
     descriptionS: "Stalno se ponasa kao da je princ, tako je i dobio svoje ime. Ima prelepo belo perje koje se nikad ne prlja.",
@@ -27,6 +29,7 @@ let birds = [
   },
   {
     id: 3,
+    type: 1,
     nameS: "Papagaj Robin",
     nameE: "Robin the parrot",
     descriptionS: "Izglasan za najboljeg pevaca u azilu. Osim sto lepo peva ima i zanimljivo perje zelene boje.",

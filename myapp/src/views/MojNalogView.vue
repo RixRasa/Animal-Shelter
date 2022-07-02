@@ -1,4 +1,12 @@
 <template>
+
+<div class="breadcrums">
+        <router-link to='/mojnalog' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Moj nalog</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">My profile</text>
+        </router-link>
+    </div>
+
     <div class="container-fluid py-5">
         <div class="container">
             <!--<div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
@@ -49,15 +57,15 @@
             </div>
             <br>
             <div class="row">
-                <h3 v-if="lang.value == 'srb'" class=''>Odglasi</h3>
-                <h3 v-if="lang.value == 'eng'" class=''>Adds</h3>
+                <h4 v-if="lang.value == 'srb'" class="text-primary text-uppercase">Oglasi</h4>
+                <h4 v-if="lang.value == 'eng'" class="text-primary text-uppercase">Adds</h4>
                 <div v-for='oglas in mojOglasi' :key="oglas.naziv" class="col-lg-4 col-md-6 col-sm-12 my-3">
                     <OglasPreview :mojOglas='oglas'></OglasPreview>
                 </div>
             </div>
             <div class="row">
-                <h3 v-if="lang.value == 'srb'" class=''>Komentari</h3>
-                <h3 v-if="lang.value == 'eng'" class=''>Comments</h3>
+                <h4 v-if="lang.value == 'srb'" class="text-primary text-uppercase">Komentari</h4>
+                <h4 v-if="lang.value == 'eng'" class="text-primary text-uppercase">Comments</h4>
                 <div class="col-lg-5 col-sm-12 m-2" v-for='komentar in mojiKomentari' :key="komentar.ime" >
                     <KomentarPreview :mojKomentar='komentar'></KomentarPreview>
                 </div>

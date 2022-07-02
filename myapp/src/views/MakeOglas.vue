@@ -1,4 +1,12 @@
 <template>
+
+<div class="breadcrums">
+        <router-link to='/makeoglas' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Dodaj Oglas</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Post Ads</text>
+        </router-link>
+    </div>
+
     <div class="container-fluid pt-5">
         <div class="container">
             <div v-if="lang.value == 'srb'" class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">

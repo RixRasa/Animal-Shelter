@@ -3,6 +3,7 @@ let animals = [
     {
       //ovaj je tvoj raso, kad napises sve kopiraj to u birds.js takodje, to treba za preview
       id: 1,
+      type: 1,
       nameS: "",
       nameE: "",
       descriptionS:
@@ -16,6 +17,7 @@ let animals = [
     },
     {
       id: 2,
+      type: 1,
       nameS: "Princ Papiga",
       nameE: "Prince Papiga",
       descriptionS: "Stalno se ponasa kao da je princ, tako je i dobio svoje ime. Ima prelepo belo perje koje se nikad ne prlja.",
@@ -27,6 +29,7 @@ let animals = [
     },
     {
       id: 3,
+      type: 1,
       nameS: "Papagaj Robin",
       nameE: "Robin the parrot",
       descriptionS: "Izglasan za najboljeg pevaca u azilu. Osim sto lepo peva ima i zanimljivo perje zelene boje.",
@@ -38,6 +41,7 @@ let animals = [
     },
     {
       id: 4,
+      type: 2,
       nameS: "Garfild",
       nameE: "Garfield",
       descriptionS: "Voli da jede lazanju. Najdeblja macka u azilu. Nije druzeljubiva i bije se sa svima za hranu. Molim vas udomite je.",
@@ -49,6 +53,7 @@ let animals = [
     },
     {
       id: 5,
+      type: 2,
       nameS: "Leo",
       nameE: "Leo",
       descriptionS: "Prelepa crna macka, voli da se sunca.",
@@ -60,6 +65,7 @@ let animals = [
     },
     {
       id: 6,
+      type: 2,
       nameS: "Snezna kraljica",
       nameE: "Snow queen",
       descriptionS: "Prelepa bela macka. Voli da je u centru paznje i da se mazi stalno.",
@@ -71,6 +77,7 @@ let animals = [
     },
     {
       id: 7,
+      type: 3,
       nameS: "Lima Andriana",
       nameE: "Lima Andriana",
       descriptionS: "Inteligentan, privrzen i lojalan pas. Nije druzeljubiva sa ostalim psima, ali nema vece maze sa ljudima.",
@@ -82,6 +89,7 @@ let animals = [
     },
     {
       id: 8,
+      type: 3,
       nameS: "Anabela zvana Bela",
       nameE: "Anabela aka Bela",
       descriptionS: "Zastitnicki, osetljiv i umiljat pas, pun energije. Budite spremni na setnje svakog dana.",
@@ -93,6 +101,7 @@ let animals = [
     },
     {
       id: 9,
+      type: 3,
       nameS: "Akira",
       nameE: "Akira",
       descriptionS: "Prijateljski, drustven i zivahan pas. Iako jos mala, veoma je jak pas i dobar cuvar.",

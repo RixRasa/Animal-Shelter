@@ -1,4 +1,16 @@
 <template>
+
+<div class="breadcrums">
+        <router-link to='/showoglasi' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">Izgubljeni ljubimci</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">Lost pets</text>
+        </router-link>
+        <router-link :to='/oglasview/+oglas.naziv' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">{{ oglas.naslov }}</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">{{ oglas.naslov }}</text>
+        </router-link>
+    </div>
+
     <div class="container-fluid py-5">
       <div class="container">
           <div class="row ">

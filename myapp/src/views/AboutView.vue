@@ -1,5 +1,13 @@
 
 <template>
+
+<div class="breadcrums">
+        <router-link to='/about' class="text-primary text-uppercase">
+            <text v-if="lang.value == 'srb'">O nama</text><i class="bi bi-chevron-right"></i>
+            <text v-if="lang.value == 'eng'">About us</text>
+        </router-link>
+    </div>
+
 <div class="container-fluid py-5">
       <div class="container">
           <div class="row gx-5">
@@ -79,5 +87,17 @@
       </div>
   </div>
 </template>
+
+<script>
+import { lang } from "../data/lang.js";
+export default {
+    name: "AboutView",
+    data() {
+        return {
+            lang,
+        };
+    },
+};
+</script>
 
 
