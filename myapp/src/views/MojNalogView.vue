@@ -79,6 +79,7 @@
 import {lang} from '../data/lang.js'
 import OglasPreviewNalog from '../components/OglasPreViewNalog.vue'
 import KomentarPreview from '../components/KomentarPreview.vue'
+import allUsers from '../data/users.js'
 
 
 export default{
@@ -97,10 +98,22 @@ export default{
         }
     },
     created(){
+        if(localStorage.getItem('CurrentUser') == null){
+            this.$router.push('home'); return;
+        }
+        
         var username = JSON.parse(localStorage.getItem('CurrentUser'));
+
+        if(localStorage.getItem('allUsers')==null){
+            localStorage.setItem('allUsers',JSON.stringify(allUsers));
+        }
         this.allUsers = JSON.parse(localStorage.getItem('allUsers'));
+      
 
         this.user = this.allUsers.find(user => user.username=username)
+        alert(this.user.username);
+        alert(this.user.email);
+
 
         this.allOglasi = JSON.parse(localStorage.getItem('allOglasi'));
         this.mojOglasi = this.allOglasi.filter(oglas => oglas.username == username);
