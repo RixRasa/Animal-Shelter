@@ -60,7 +60,7 @@
                 <h4 v-if="lang.value == 'srb'" class="text-primary text-uppercase">Oglasi</h4>
                 <h4 v-if="lang.value == 'eng'" class="text-primary text-uppercase">Adds</h4>
                 <div v-for='oglas in mojOglasi' :key="oglas.naziv" class="col-lg-4 col-md-6 col-sm-12 my-3">
-                    <OglasPreview :mojOglas='oglas'></OglasPreview>
+                    <OglasPreviewNalog :mojOglas='oglas'></OglasPreviewNalog>
                 </div>
             </div>
             <div class="row">
@@ -72,18 +72,18 @@
             </div>
         </div>
     </div>
-    <br><br><br><br>
+    <br><br><br><br><br><br><br><br>
 </template>
 
 <script>
 import {lang} from '../data/lang.js'
-import OglasPreview from '../components/OglasPreview.vue'
+import OglasPreviewNalog from '../components/OglasPreViewNalog.vue'
 import KomentarPreview from '../components/KomentarPreview.vue'
 
 
 export default{
     components:{
-            OglasPreview,
+            OglasPreviewNalog,
             KomentarPreview,
         },
     data(){

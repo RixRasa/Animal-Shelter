@@ -4,14 +4,14 @@ let birds = [
     //ovaj je tvoj raso, kad napises sve kopiraj to u birds.js takodje(ili u animals.js gde god si prvo usao)
     id: 1,
     type: 1,
-    nameS: "",
-    nameE: "",
+    nameS: "Žile",
+    nameE: "Žile",
     descriptionS:
-      "Divan detlic. Voli da udara kljunom u drvo. Jako druzeljubiv i nekadasnji prijatelj bigl Bele.",
+      "Papagaj tigrica. Teritorijalni papagaj koji bas i ne dozvoljava lak pristup njegovoj kucici. Voli da se kupa kao i da se igra sa zvoncem. Omiljena hrama mu je crvena slatka paprika",
     descriptionE:
-      "Wonderful woodpecker. Loves to hit wood with his beak. Very friendly and ex-friends with Beagle Bella",
-    weight: "0.9kg",
-    age: "1",
+      "Budgie Parrot. A territorial parrot who does not allow easy access to his house. He likes to bathe and play with bell. His favorite meal is red sweet pepper.",
+    weight: "35g",
+    age: "5",
     image_path: "/images/bird1.jpg",
     video_path: "https://www.youtube.com/embed/ewptevBIqNk"
   },
