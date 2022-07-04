@@ -152,7 +152,7 @@ export default {
     methods:{
         Logout(){
             localStorage.removeItem('CurrentUser');
-            localStorage.removeItem
+
         }
     }
 };
