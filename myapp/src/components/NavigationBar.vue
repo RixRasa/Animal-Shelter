@@ -16,8 +16,9 @@
                 <router-link to='/showoglasi' v-if="lang.value == 'eng'" class="nav-item nav-link">Lost Pets </router-link>
                 <router-link to='/makeoglas' v-if="lang.value == 'srb'" class="nav-item nav-link">Dodaj Oglas</router-link>
                 <router-link to='/makeoglas' v-if="lang.value == 'eng'" class="nav-item nav-link">Post Ads</router-link>
-                <router-link to='/mojnalog' v-if="lang.value == 'srb'" class="nav-item nav-link">Moj Nalog</router-link>
-                <router-link to='/mojnalog' v-if="lang.value == 'eng'" class="nav-item nav-link">My Profile</router-link>
+
+                <router-link to='/mojnalog' v-if="lang.value == 'srb' && logged.value == true" class="nav-item nav-link">Moj Nalog</router-link>
+                <router-link to='/mojnalog' v-if="lang.value == 'eng' && logged.value == true" class="nav-item nav-link">My Profile</router-link>
 
                 <div class="nav-item dropdown">
                     <div v-if="lang.value == 'srb'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Zivotinje</div>
