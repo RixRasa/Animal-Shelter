@@ -44,12 +44,7 @@
                                 <h5 v-else-if="lang.value == 'eng'"></h5>
                                 <br>
                             </div>
-                            <div class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                <h4 v-if="lang.value == 'srb'">Email: {{user.email}}</h4>
-                                <h4 v-else-if="lang.value == 'eng'">Email: {{user.email}}</h4>
-                                </div>
-                            </div>
+                            
                             
                         </div>
                     </div>
@@ -101,7 +96,7 @@ export default{
         if(localStorage.getItem('CurrentUser') == null){
             this.$router.push('home'); return;
         }
-        
+
         var username = JSON.parse(localStorage.getItem('CurrentUser'));
 
         if(localStorage.getItem('allUsers')==null){
