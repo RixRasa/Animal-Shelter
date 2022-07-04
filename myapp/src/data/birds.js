@@ -1,7 +1,6 @@
 let birds = [
 
   {
-    //ovaj je tvoj raso, kad napises sve kopiraj to u birds.js takodje(ili u animals.js gde god si prvo usao)
     id: 1,
     type: 1,
     nameS: "Žile",

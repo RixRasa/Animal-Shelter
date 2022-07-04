@@ -110,9 +110,7 @@ export default{
         this.allUsers = JSON.parse(localStorage.getItem('allUsers'));
       
 
-        this.user = this.allUsers.find(user => user.username=username)
-        alert(this.user.username);
-        alert(this.user.email);
+        this.user = this.allUsers.find(user => user.username==username)
 
 
         this.allOglasi = JSON.parse(localStorage.getItem('allOglasi'));
